@@ -17,11 +17,44 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: const Text('Welcome to Heidelberg!'),
         ),
-        body: const topLeft(
-          alignment: Alignment.topLeft,
+        body: const Center(
           child: Text('Heidelberg Catechism'),
         ),
       ),
     );
   }
+}
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          appBar: AppBar(
+            title: Text('Answer'),
+          ),
+          body: Center(
+              child: Column(children: <Widget>[
+            Container(
+              margin: EdgeInsets.all(25),
+              child: FlatButton(
+                child: Text(
+                  'Answer',
+                  style: TextStyle(fontSize: 20.0),
+                ),
+                onPressed: () {},
+              ),
+            ),
+            Container(
+              margin: EdgeInsets.all(25),
+              child: FlatButton(
+                child: Text(
+                  'LogIn',
+                  style: TextStyle(fontSize: 20.0),
+                ),
+                color: Colors.blueAccent,
+                textColor: Colors.white,
+                onPressed: () {},
+              ),
+            ),
+          ]))));
 }
