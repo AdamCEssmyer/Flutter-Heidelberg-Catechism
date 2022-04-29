@@ -1,4 +1,6 @@
 import 'dart:html';
+import 'dart:core';
+import 'dart:io';
 
 import 'package:flutter/material.dart';
 
@@ -23,38 +25,4 @@ class MyApp extends StatelessWidget {
       ),
     );
   }
-}
-
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-      home: Scaffold(
-          appBar: AppBar(
-            title: Text('Answer'),
-          ),
-          body: Center(
-              child: Column(children: <Widget>[
-            Container(
-              margin: EdgeInsets.all(25),
-              child: FlatButton(
-                child: Text(
-                  'Answer',
-                  style: TextStyle(fontSize: 20.0),
-                ),
-                onPressed: () {},
-              ),
-            ),
-            Container(
-              margin: EdgeInsets.all(25),
-              child: FlatButton(
-                child: Text(
-                  'LogIn',
-                  style: TextStyle(fontSize: 20.0),
-                ),
-                color: Colors.blueAccent,
-                textColor: Colors.white,
-                onPressed: () {},
-              ),
-            ),
-          ]))));
 }
